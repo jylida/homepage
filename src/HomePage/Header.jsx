@@ -7,11 +7,11 @@ import Container from "@mui/material/Container";
 import useTheme from "@mui/material/styles/useTheme";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import Typography from "@mui/material/Typography";
-import MuiLink from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
 import DrawerList from "./DrawerList";
 import Logo from "../static/images/Logo.svg";
+import RedirectToAdminButton from "./RedirectToAdminButton";
 const listNames = [
   { name: "学校简介", url: "/intro" },
   // { name: "招生信息", url: "/admin" },
@@ -92,22 +92,30 @@ const Header = () => {
             }}
           >
             <Typography
+              component={Link}
+              to="/"
               fontFamily="Noto Serif SC"
               letterSpacing={2}
               sx={{
                 fontSize: 15,
                 opacity: Math.max(0, 1 - scrollY / headerHeightChange),
+                textDecoration: "none",
+                color: "black",
               }}
             >
               呼和浩特市
             </Typography>
             <Typography
+              component={Link}
+              to="/"
               fontWeight={900}
               letterSpacing={6}
               sx={{
                 fontSize: { xs: 30, md: 40 },
                 fontFamily: "Noto Serif SC",
                 opacity: Math.max(0, 1 - scrollY / headerHeightChange),
+                textDecoration: "none",
+                color: "black",
               }}
             >
               敬业学校
@@ -133,17 +141,7 @@ const Header = () => {
                   </Typography>
                 </Box>
               ))}
-              <MuiLink
-                href="https://jingyeschool.org.cn/ims/#/login"
-                target="_blank"
-                sx={{
-                  textDecoration: "none",
-                }}
-              >
-                <Typography variant="subtitle1" fontWeight="bold" color="error">
-                  学校信息系统
-                </Typography>
-              </MuiLink>
+              <RedirectToAdminButton />
             </>
           )}
         </Container>

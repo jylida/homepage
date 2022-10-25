@@ -6,8 +6,8 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton, Typography } from "@mui/material";
-import MuiLink from "@mui/material/Link";
 import Divider from "@mui/material/Divider";
+import RedirectToAdminButton from "./RedirectToAdminButton";
 const DrawerList = ({ list }) => {
   const [open, setOpen] = useState(false);
   return (
@@ -56,22 +56,7 @@ const DrawerList = ({ list }) => {
                 justifyContent: "center",
               }}
             >
-              <MuiLink
-                href="https://jingyeschool.org.cn/ims/#/login"
-                target="_blank"
-                sx={{
-                  textDecoration: "none",
-                }}
-              >
-                <Typography
-                  variant="h6"
-                  textAlign="center"
-                  fontWeight="bold"
-                  color="info.main"
-                >
-                  学校信息系统
-                </Typography>
-              </MuiLink>
+              <RedirectToAdminButton />
             </ListItem>
           </List>
         </Box>
