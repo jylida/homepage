@@ -21,9 +21,15 @@ const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down("md"));
+  const headerHeightChange = isSM ? 48 : 128;
+  console.log(headerHeightChange);
   useEffect(() => {
+    let timer;
     const handleScroll = (e) => {
-      setScrollY(window.scrollY);
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        setScrollY(window.scrollY);
+      }, 15);
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -55,7 +61,6 @@ const Header = () => {
       >
         <Container
           maxWidth="lg"
-          disableGutters={{ xs: true, md: false }}
           sx={{
             display: "flex",
             flexDirection: "row",
@@ -83,20 +88,22 @@ const Header = () => {
             }}
           >
             <Typography
-              variant="caption"
               fontFamily="Noto Serif SC"
+              letterSpacing={2}
               sx={{
-                opacity: Math.pow(3 / Math.max(3, scrollY), 2),
+                fontSize: 15,
+                opacity: 5 / Math.max(5, scrollY),
               }}
             >
               呼和浩特市
             </Typography>
             <Typography
               fontWeight={900}
+              letterSpacing={6}
               sx={{
                 fontSize: { xs: 30, md: 40 },
                 fontFamily: "Noto Serif SC",
-                opacity: Math.pow(3 / Math.max(3, scrollY), 2),
+                opacity: Math.max(0, 1 - scrollY / headerHeightChange),
               }}
             >
               敬业学校
