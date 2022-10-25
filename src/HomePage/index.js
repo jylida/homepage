@@ -6,7 +6,12 @@ import Footer from "./Footer";
 
 const HomePage = () => {
   return (
-    <Stack direction="column" alignItems="center" minHeight="100vh">
+    <Stack
+      direction="column"
+      alignItems="center"
+      minHeight="100vh"
+      width="100%"
+    >
       <Header />
       <Outlet />
       <Footer />

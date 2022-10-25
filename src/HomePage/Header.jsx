@@ -17,12 +17,12 @@ const listNames = [
   // { name: "招生信息", url: "/admin" },
   { name: "加入我们", url: "/hire" },
 ];
+
 const Header = () => {
   const [scrollY, setScrollY] = useState(0);
   const theme = useTheme();
   const isSM = useMediaQuery(theme.breakpoints.down("md"));
   const headerHeightChange = isSM ? 48 : 128;
-  console.log(headerHeightChange);
   useEffect(() => {
     let timer;
     const handleScroll = (e) => {
@@ -40,9 +40,13 @@ const Header = () => {
   return (
     <AppBar
       component="nav"
-      position="sticky"
       elevation={0}
       sx={{
+        position: "sticky",
+        position: "-moz-sticky",
+        position: "-webkit-sticky",
+        position: "-ms-sticky",
+        top: 0,
         borderBottom: { xs: "5px solid #368B91", md: "10px solid #368B91" },
         height: isSM
           ? 128 - Math.min(48, scrollY)
@@ -134,6 +138,7 @@ const Header = () => {
               ))}
               <MuiLink
                 href="https://jingyeschool.org.cn/ims/#/login"
+                target="_blank"
                 sx={{
                   textDecoration: "none",
                 }}

@@ -71,6 +71,7 @@ const HireFrontPage = () => {
             <Button variant="outlined" color="success" disableElevation>
               <MuiLink
                 href="https://jingyeschool.org.cn:8443/"
+                target="_blank"
                 sx={{
                   textDecoration: "none",
                   color: "success.main",

@@ -58,6 +58,7 @@ const DrawerList = ({ list }) => {
             >
               <MuiLink
                 href="https://jingyeschool.org.cn/ims/#/login"
+                target="_blank"
                 sx={{
                   textDecoration: "none",
                 }}

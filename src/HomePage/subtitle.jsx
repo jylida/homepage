@@ -8,7 +8,6 @@ const Subtitle = (props) => {
       fontFamily="Noto Serif SC"
       sx={{
         fontSize: 25,
-        paddingBottom: { xs: "0.5rem", md: "2rem" },
       }}
     >
       {children}
