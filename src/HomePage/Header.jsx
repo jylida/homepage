@@ -61,6 +61,7 @@ const Header = () => {
       >
         <Container
           maxWidth="lg"
+          disableGutters
           sx={{
             display: "flex",
             flexDirection: "row",
