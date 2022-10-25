@@ -68,18 +68,20 @@ const Header = () => {
             alignItems: "center",
           }}
         >
-          <Box
-            component="img"
-            src={Logo}
-            alt="School Logo"
-            sx={{
-              padding: {
-                xs: "0.5rem 0.5rem 0.5rem 0",
-                md: "1rem 1rem 1rem 0",
-              },
-              height: { xs: "4rem", md: "6rem" },
-            }}
-          />
+          <Link to="/">
+            <Box
+              component="img"
+              src={Logo}
+              alt="School Logo"
+              sx={{
+                padding: {
+                  xs: "0.5rem 0.5rem 0.5rem 0",
+                  md: "1rem 1rem 1rem 0",
+                },
+                height: { xs: "4rem", md: "6rem" },
+              }}
+            />
+          </Link>
           <Stack
             direction="column"
             sx={{
@@ -92,7 +94,7 @@ const Header = () => {
               letterSpacing={2}
               sx={{
                 fontSize: 15,
-                opacity: 5 / Math.max(5, scrollY),
+                opacity: Math.max(0, 1 - scrollY / headerHeightChange),
               }}
             >
               呼和浩特市
