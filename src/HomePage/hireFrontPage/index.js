@@ -12,7 +12,14 @@ import Subtitle from "../subtitle";
 const HireFrontPage = () => {
   // const departmentsName = "初中教学部,高中教学部,其他".split(",");
   return (
-    <Stack width="100%" direction="column" flexGrow={1}>
+    <Stack
+      width="100%"
+      direction="column"
+      flexGrow={1}
+      sx={{
+        marginTop: { xs: "128px", md: "256px" },
+      }}
+    >
       <Box
         component="img"
         src={HireCover}

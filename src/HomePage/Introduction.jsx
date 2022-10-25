@@ -9,6 +9,7 @@ const Introduction = () => {
     <Container
       maxWidth="md"
       sx={{
+        marginTop: { xs: "128px", md: "256px" },
         flexGrow: 1,
       }}
     >

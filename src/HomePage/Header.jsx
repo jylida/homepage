@@ -42,10 +42,7 @@ const Header = () => {
       component="nav"
       elevation={0}
       sx={{
-        position: "sticky",
-        position: "-moz-sticky",
-        position: "-webkit-sticky",
-        position: "-ms-sticky",
+        position: "fixed",
         top: 0,
         borderBottom: { xs: "5px solid #368B91", md: "10px solid #368B91" },
         height: isSM
