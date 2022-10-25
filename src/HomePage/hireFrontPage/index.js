@@ -1,5 +1,4 @@
 import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
@@ -7,6 +6,7 @@ import MuiLink from "@mui/material/Link";
 import HireCover from "../../static/images/hire.jpg";
 import BackHomeButton from "../BackHomeButton";
 import Paragraph from "../Paragraph";
+import Subtitle from "../subtitle";
 // import JobList from "./JobList";
 
 const HireFrontPage = () => {
@@ -62,14 +62,12 @@ const HireFrontPage = () => {
             spacing={2}
             sx={{
               width: "100%",
-              paddingBottom: "2rem",
+              paddingBottom: "1rem",
               alignItems: "center",
               justifyContent: { xs: "space-between", md: "flex-start" },
             }}
           >
-            <Typography variant="h4" fontWeight="bold" fontFamily="serif">
-              加入我们
-            </Typography>
+            <Subtitle>加入我们</Subtitle>
             <Button variant="outlined" color="success" disableElevation>
               <MuiLink
                 href="https://jingyeschool.org.cn:8443/"

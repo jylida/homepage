@@ -1,9 +1,9 @@
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import BackHomeButton from "./BackHomeButton";
 import Paragraph from "./Paragraph";
+import Subtitle from "./subtitle";
 const Introduction = () => {
   return (
     <Container
@@ -24,16 +24,7 @@ const Introduction = () => {
         <Box width="100%">
           <BackHomeButton />
         </Box>
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          fontFamily="serif"
-          sx={{
-            paddingBottom: { xs: "1rem", md: "2rem" },
-          }}
-        >
-          学校简介
-        </Typography>
+        <Subtitle>学校简介</Subtitle>
         <Paragraph>
           敬业学校是呼和浩特经市教育局批准成立的第一所民办完全中学,现为呼
           和浩特市民办教育十强、自治区“依法治校示范校”和“民办学校示范校”双
